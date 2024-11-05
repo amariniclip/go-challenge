@@ -24,3 +24,50 @@ La **Sales API** gestiona las ventas dentro de la tienda, procesando la informac
 ---
 
 Este desafío consiste en corregir los errores existentes y mejorar la funcionalidad de ambas APIs para asegurar que el sistema sea robusto, escalable y fácil de usar.
+
+##  Getting Started
+
+Este proyecto está desarrollado en la versión 1.22.3 de Go. Asegúrate de tener esta versión instalada en tu máquina. Puedes comprobar tu versión de Go con el siguiente comando:
+
+```bash
+  go version
+```
+
+### Pasos para levantar la aplicación
+
+1. **Clonar el repositorio**
+
+   Clona el repositorio a tu máquina local:
+
+   ```bash
+   git clone https://github.com/amariniclip/go-challenge.git
+   cd go-challenge
+   ```
+
+2. **Inicializar los módulos de Go**
+
+   Ejecuta `go mod tidy` para asegurarte de que todos los módulos y dependencias estén correctamente instalados:
+
+   ```bash
+   go mod tidy
+   ```
+
+3. **Levantar la aplicación**
+
+   Para correr la aplicación, usa el siguiente comando:
+
+   ```bash
+   go run cmd/api/main.go
+   ```
+
+### Pasos para correr los tests
+
+Para ejecutar los tests de la aplicación y asegurarte de que todo funciona correctamente, puedes usar el siguiente comando:
+
+```bash
+    go test -v ./... -race -count=1
+```
+
+- v: Muestra la salida detallada de los tests.
+- race: Habilita la detección de condiciones de carrera durante las pruebas.
+- count=1: Ejecuta los tests solo una vez (por defecto, Go ejecuta los tests varias veces para mejorar la fiabilidad).
